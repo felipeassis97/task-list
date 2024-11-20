@@ -1,62 +1,58 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# Ignore operating system files
+.DS_Store
+Thumbs.db
 
-## User settings
-xcuserdata/
-
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
+# Ignore temporary and build files
+build/
 *.ipa
-*.dSYM.zip
+*.app
 *.dSYM
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcuserdata/
+DerivedData/
+.idea/
+*.xcuserstate
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+# Ignore Xcode temporary and log files
+*.log
+*.swp
+*.lock
+*.xcscmblueprint
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# Ignore environment-specific configuration files
+xcdebugger/
+*.xcconfig
 
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+# Ignore Carthage generated libraries
 Carthage/Build/
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+# Ignore CocoaPods dependencies
+Pods/
+Podfile.lock
 
+# Ignore Swift Package Manager files
+/.build
+/Package.resolved
+
+# Ignore caches from simulators and connected devices
+Library/Developer/Xcode/DerivedData/
+Library/Developer/CoreSimulator/Devices/
+
+# Ignore secret files and API keys (e.g., for API config files)
+Secrets.plist
+Configurations/*.xcconfig
+
+# Ignore Fastlane files (optional, if you use Fastlane)
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
+fastlane/screenshots
 fastlane/test_output
+
+# Ignore test artifacts and temporary test files
+test_output/
+*.junit
+
+# Ignore playground-specific files
+*.playground/**/timeline.xctimeline
+*.playground/**/playground.xcworkspace
